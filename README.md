@@ -1,5 +1,8 @@
 # Kotlin Counter App
 
+![Build Status](https://github.com/monikavalkova/kotlin-app-playground/workflows/Android%20CI/badge.svg)
+![Tests](https://github.com/monikavalkova/kotlin-app-playground/workflows/Code%20Quality/badge.svg)
+
 My first Android mobile app - a simple counter application built with Kotlin and Jetpack Compose. This project serves as a learning playground for Android development.
 
 ## Features
@@ -169,4 +172,34 @@ After running tests, view the HTML report at:
 ```
 build/reports/tests/testDebugUnitTest/index.html
 ```
+
+## Continuous Integration
+
+### GitHub Actions Workflows
+
+The project includes automated CI/CD pipelines:
+
+#### 1. Android CI (`android-ci.yml`)
+Runs on every PR and push to master:
+- ✅ Runs all unit tests
+- ✅ Builds debug APK
+- ✅ Uploads test reports and APK artifacts
+- ✅ Publishes test results in PR
+
+#### 2. Code Quality (`code-quality.yml`)
+Runs on every PR:
+- ✅ Runs lint checks
+- ✅ Uploads lint reports
+
+### Status Badges
+Add these to your README (replace `username/repo`):
+```markdown
+![Build Status](https://github.com/username/repo/workflows/Android%20CI/badge.svg)
+![Tests](https://github.com/username/repo/workflows/Code%20Quality/badge.svg)
+```
+
+### Viewing Results
+- Test results appear as checks on PRs
+- Download APK artifacts from workflow runs
+- View detailed test reports in Actions tab
 
