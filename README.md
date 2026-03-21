@@ -141,3 +141,32 @@ Open the project in Android Studio and click the green "Run" button (or press Sh
 - Material3
 - DataStore Preferences 1.1.1
 
+## Testing
+
+### Running Unit Tests
+
+```bash
+./gradlew testDebugUnitTest
+```
+
+This runs unit tests for the ViewModel and business logic. The project includes tests for:
+- Counter starting at zero
+- Incrementing counter
+- Resetting counter
+- Multiple increments
+
+### Test Architecture
+
+The app uses a testable architecture with:
+- **Repository pattern**: Separates data access from business logic
+- **ViewModel**: Manages UI state
+- **Fake repository**: For fast, isolated testing
+- **Coroutine testing**: Using `StandardTestDispatcher` and Turbine
+
+### Test Report
+
+After running tests, view the HTML report at:
+```
+build/reports/tests/testDebugUnitTest/index.html
+```
+
