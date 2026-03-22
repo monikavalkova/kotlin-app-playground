@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "weekly"
       day: "sunday"
-      time: "12:40"
+      time: "12:45"
     assignees:
       - "monikavalkova"
     groups:
