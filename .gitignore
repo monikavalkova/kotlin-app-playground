@@ -97,6 +97,9 @@ lint/tmp/
 # macOS
 .DS_Store
 
+# Documentation (kept locally)
+next-steps
+
 # Gradle Wrapper (optional - uncomment to exclude wrapper)
 # gradle/wrapper/gradle-wrapper.jar
 # gradle/wrapper/gradle-wrapper.properties

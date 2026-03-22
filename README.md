@@ -1,5 +1,8 @@
 # Kotlin Counter App
 
+![Build Status](https://github.com/monikavalkova/kotlin-app-playground/workflows/Android%20CI/badge.svg)
+![Tests](https://github.com/monikavalkova/kotlin-app-playground/workflows/Code%20Quality/badge.svg)
+
 My first Android mobile app - a simple counter application built with Kotlin and Jetpack Compose. This project serves as a learning playground for Android development.
 
 ## Features
@@ -140,4 +143,63 @@ Open the project in Android Studio and click the green "Run" button (or press Sh
 - Compose BOM 2024.12.01
 - Material3
 - DataStore Preferences 1.1.1
+
+## Testing
+
+### Running Unit Tests
+
+```bash
+./gradlew testDebugUnitTest
+```
+
+This runs unit tests for the ViewModel and business logic. The project includes tests for:
+- Counter starting at zero
+- Incrementing counter
+- Resetting counter
+- Multiple increments
+
+### Test Architecture
+
+The app uses a testable architecture with:
+- **Repository pattern**: Separates data access from business logic
+- **ViewModel**: Manages UI state
+- **Fake repository**: For fast, isolated testing
+- **Coroutine testing**: Using `StandardTestDispatcher` and Turbine
+
+### Test Report
+
+After running tests, view the HTML report at:
+```
+build/reports/tests/testDebugUnitTest/index.html
+```
+
+## Continuous Integration
+
+### GitHub Actions Workflows
+
+The project includes automated CI/CD pipelines:
+
+#### 1. Android CI (`android-ci.yml`)
+Runs on every PR and push to master:
+- ✅ Runs all unit tests
+- ✅ Builds debug APK
+- ✅ Uploads test reports and APK artifacts
+- ✅ Publishes test results in PR
+
+#### 2. Code Quality (`code-quality.yml`)
+Runs on every PR:
+- ✅ Runs lint checks
+- ✅ Uploads lint reports
+
+### Status Badges
+Add these to your README (replace `username/repo`):
+```markdown
+![Build Status](https://github.com/username/repo/workflows/Android%20CI/badge.svg)
+![Tests](https://github.com/username/repo/workflows/Code%20Quality/badge.svg)
+```
+
+### Viewing Results
+- Test results appear as checks on PRs
+- Download APK artifacts from workflow runs
+- View detailed test reports in Actions tab
 
