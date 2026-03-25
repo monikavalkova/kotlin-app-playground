@@ -3,7 +3,7 @@
 ![Build Status](https://github.com/monikavalkova/kotlin-app-playground/workflows/Android%20CI/badge.svg)
 ![Tests](https://github.com/monikavalkova/kotlin-app-playground/workflows/Code%20Quality/badge.svg)
 
-My first Android mobile app - a simple counter application built with Kotlin and Jetpack Compose. This project serves as a learning playground for Android development.
+Android mobile app - a simple counter application built with Kotlin and Jetpack Compose. This project serves as a learning playground for Android development and experimentation with GitHub Actions.
 
 ## Features
 - Material Design 3
